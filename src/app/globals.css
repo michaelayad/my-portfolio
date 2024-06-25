@@ -4,10 +4,13 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --color-primary: rgb(255 115 179);
-    --color-secondary: rgb(111 114 185);
+  --background-start-rgb: 231, 237, 231;
+  --background-end-rgb: 206, 219, 248;
+  --color-primary: #641de7;
+  --color-secondary: #D7BBF5;
+  --color-primary-bg: rgba(100, 29, 231, 0.4);
+  --color-secondary-bg: rgba(215, 187, 245, 0.4);
+  --color-hover: rgba(100, 29, 231, 0.4);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -24,8 +27,11 @@
   --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --color-primary: rgb(128, 12, 243);
-    --color-secondary: rgb(226, 143, 18);
+    --color-primary: #641de7;
+    --color-secondary: #D7BBF5;
+    --color-primary-bg: rgba(100, 29, 231, 0.4);
+  --color-secondary-bg: rgba(215, 187, 245, 0.4);
+    --color-hover: rgba(100, 29, 231, 0.4);
 }
 
 body {

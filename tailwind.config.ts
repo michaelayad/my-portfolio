@@ -18,6 +18,9 @@ const config: Config = {
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
+        "primary-bg": "var(--color-primary-bg)",
+        "secondary-bg": "var(--color-secondary-bg)",
+        hover:"var(--color-hover)",
       },
     },
   },
