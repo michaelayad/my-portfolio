@@ -2,15 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 231, 237, 231;
   --background-end-rgb: 206, 219, 248;
-  --color-primary: #641de7;
-  --color-secondary: #D7BBF5;
-  --color-primary-bg: rgba(100, 29, 231, 0.4);
-  --color-secondary-bg: rgba(215, 187, 245, 0.4);
-  --color-hover: hsl(261, 81%, 45%);
+  --color-primary: #06075D;
+  --color-primary-dark:hsl(from var(--color-primary) h s calc(l - 5));
+  --color-primary-darker:hsl(from var(--color-primary) h s calc(l - 10));
+  --color-primary-darkest:hsl(from var(--color-primary) h s calc(l - 15));
+  --color-primary-light:hsl(from var(--color-primary) h s calc(l + 5));
+  --color-primary-lighter:hsl(from var(--color-primary) h s calc(l + 10));
+  --color-primary-lightest:hsl(from var(--color-primary) h s calc(l + 15));
+  --color-secondary: #8CD6E3;
+  --color-secondary-dark:hsl(from var(--color-secondary) h s calc(l - 5));
+  --color-secondary-darker:hsl(from var(--color-secondary) h s calc(l - 10));
+  --color-secondary-darkest:hsl(from var(--color-secondary) h s calc(l - 15));
+  --color-secondary-light:hsl(from var(--color-secondary) h s calc(l + 5));
+  --color-secondary-lighter:hsl(from var(--color-secondary) h s calc(l + 10));
+  --color-secondary-lightest:hsl(from var(--color-secondary) h s calc(l + 15));
+
+  --color-primary-bg:rgba(var(--color-primary), 0.4);
+  --color-secondary-bg: rgba(var(--color-secondary), 0.4);
+
+  --color-hover: hsl(from var(--color-primary) h s calc(l - 5));
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -27,11 +43,25 @@
   --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --color-primary: #641de7;
-    --color-secondary: #D7BBF5;
-    --color-primary-bg: rgba(100, 29, 231, 0.4);
-  --color-secondary-bg: rgba(215, 187, 245, 0.4);
-  --color-hover: hsl(261, 81%, 45%);
+    --color-primary: #06075b;
+  --color-primary-dark:hsl(from var(--color-primary) h s calc(l - 5));
+  --color-primary-darker:hsl(from var(--color-primary) h s calc(l - 10));
+  --color-primary-darkest:hsl(from var(--color-primary) h s calc(l - 15));
+  --color-primary-light:hsl(from var(--color-primary) h s calc(l + 5));
+  --color-primary-lighter:hsl(from var(--color-primary) h s calc(l + 10));
+  --color-primary-lightest:hsl(from var(--color-primary) h s calc(l + 15));
+  --color-secondary: #8CD6E3;
+  --color-secondary-dark:hsl(from var(--color-secondary) h s calc(l - 5));
+  --color-secondary-darker:hsl(from var(--color-secondary) h s calc(l - 10));
+  --color-secondary-darkest:hsl(from var(--color-secondary) h s calc(l - 15));
+  --color-secondary-light:hsl(from var(--color-secondary) h s calc(l + 5));
+  --color-secondary-lighter:hsl(from var(--color-secondary) h s calc(l + 10));
+  --color-secondary-lightest:hsl(from var(--color-secondary) h s calc(l + 15));
+
+  --color-primary-bg:rgba(var(--color-primary), 0.4);
+  --color-secondary-bg: rgba(var(--color-secondary), 0.4);
+  
+  --color-hover: hsl(from var(--color-primary) h s calc(l - 5));
 }
 
 body {

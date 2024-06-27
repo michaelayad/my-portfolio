@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ProfileSection() {
   return (
-    <div className=" grid  grid-cols-5 gap-10 py-10">
+    <div className=" grid  grid-cols-5 gap-10 py-10 px-5 md:px-0">
       <div
         className={` col-span-5 md:col-span-3 py-7 order-2 md:order-1 flex flex-col justify-between`}
       >
@@ -16,7 +16,7 @@ export default function ProfileSection() {
           {" "}
           <h1 className={` text-2xl font-bold `}>Hi, I&apos;m Michael</h1>{" "}
           <h1
-            className={`font-inter text-xl py-3 leading-10 text-stone-600 dark:text-stone-300`}
+            className={`font-inter text-xl py-3 leading-10 text-stone-600 dark:text-stone-300 bg-primary-bg`}
           >
             Front-End Architect with a Problem-Solving Approach | I design
             beautiful interfaces (React, Next.js) and build strong back-ends
