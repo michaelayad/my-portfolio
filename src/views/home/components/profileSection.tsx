@@ -16,13 +16,25 @@ export default function ProfileSection() {
           {" "}
           <h1 className={` text-2xl font-bold `}>Hi, I&apos;m Michael</h1>{" "}
           <h1
-            className={`font-inter text-xl py-3 leading-10 text-stone-600 dark:text-stone-300 bg-primary-bg`}
+            className={`font-inter text-xl py-3 leading-10 text-stone-600 dark:text-stone-300`}
           >
             Front-End Architect with a Problem-Solving Approach | I design
             beautiful interfaces (React, Next.js) and build strong back-ends
             (Node.js, MongoDB) for complex projects (ERP, CRM), applying
             critical thinking for optimal solutions
           </h1>
+          <div className="h-5 bg-primary-lightest"></div>
+          <div className="h-5 bg-primary-lighter"></div>
+          <div className="h-5 bg-primary-light"></div>
+          <div className="h-5 bg-primary-dark"></div>
+          <div className="h-5 bg-primary-darker"></div>
+          <div className="h-5 bg-primary-darkest"></div>
+          <div className="h-5 bg-secondary-lightest"></div>
+          <div className="h-5 bg-secondary-lighter"></div>
+          <div className="h-5 bg-secondary-light"></div>
+          <div className="h-5 bg-secondary-dark"></div>
+          <div className="h-5 bg-secondary-darker"></div>
+          <div className="h-5 bg-secondary-darkest"></div>
         </div>
 
         <div>
