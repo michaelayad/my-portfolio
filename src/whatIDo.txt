@@ -1,0 +1,23 @@
+Home Page:
+    - services i do 
+    - small analysis (projects number , experiences year , client numbers)
+    - github tracking
+    - main skills 
+    - feature projects
+    - clients feadBack
+about Page : 
+    - professional experiences
+    - education  
+    - detailed skills 
+projects page :
+    - all projects with filters
+blogs page:
+    - all articles with filters
+contact me page:
+    - all social media links 
+    - contact me form;
+project page:
+    - project details
+    - sreenshots
+article page:   
+    - article details             
