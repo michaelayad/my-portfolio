@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="select-none">
       <body className={` ${kodeMono.variable} ${inter.variable} min-h-screen` }>{children}</body>
     </html>
   );

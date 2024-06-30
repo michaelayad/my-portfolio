@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -29,12 +30,15 @@ export default function SocialMediaComponent() {
   return (
     <>
       {socialMediaList.map((item, index) => (
-        <div
+        <Link
           key={index}
+          href={item.url}
+          target="_blank"
+          rel="noopener"
           className={`h-8 w-8 p-1 border-2 rounded-full text-primary border-primary hover:text-white hover:dark:text-black hover:border-transparent hover:bg-primary`}
         >
           {item.icon}
-        </div>
+        </Link>
       ))}
     </>
   );
