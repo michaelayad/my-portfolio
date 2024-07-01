@@ -5,7 +5,7 @@ import SocialMediaComponent from "./socialMediaComponent";
 
 export default function ProfileSection() {
   return (
-    <div className=" grid  grid-cols-5 gap-10 py-10 px-5 md:px-0">
+    <div className="md:container mx-auto grid  grid-cols-5 gap-10 py-36 px-5 md:px-0">
       <div
         className={` col-span-5 md:col-span-3 py-7 order-2 md:order-1 flex flex-col justify-between`}
       >
@@ -48,7 +48,7 @@ export default function ProfileSection() {
           </div>
         </div>
       </div>
-      <div className="col-span-5 md:col-span-2 px-10 order-1 md:order-2 group">
+      <div className="col-span-5 md:col-span-2 order-1 md:order-2 group px-5">
         <div className="relative max-w-80 h-96 mx-auto group">
           <div className=" max-w-80 h-[80%] bg-primary absolute inset-x-0 bottom-0 group-hover:bg-hover"></div>
           {/* <div className=" max-w-80 h-[80%] bg-transparent  border-4  border-current  absolute -inset-x-10 bottom-[-2.5rem]"></div> */}

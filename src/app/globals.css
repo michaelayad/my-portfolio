@@ -2,31 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 231, 237, 231;
   --background-end-rgb: 206, 219, 248;
-  --color-primary: #06075d;
-  --color-primary-dark:color-mix(in srgb,var(--color-primary),#000 10%);
-  --color-primary-darker:color-mix(in srgb,var(--color-primary),#000 25%);
-  --color-primary-darkest:color-mix(in srgb,var(--color-primary),#000 40%);
-  --color-primary-light:color-mix(in srgb,var(--color-primary),#fff 10%);
-  --color-primary-lighter:color-mix(in srgb,var(--color-primary),#fff 25%);
-  --color-primary-lightest:color-mix(in srgb,var(--color-primary),#fff 40%);
-  --color-secondary: #8CD6E3;
-  --color-secondary-dark:color-mix(in srgb,var(--color-secondary),#000 10%);
-  --color-secondary-darker:color-mix(in srgb,var(--color-secondary),#000 25%);
-  --color-secondary-darkest:color-mix(in srgb,var(--color-secondary),#000 40%);
-  --color-secondary-light:color-mix(in srgb,var(--color-secondary),#fff 10%);
-  --color-secondary-lighter:color-mix(in srgb,var(--color-secondary),#fff 25%);
-  --color-secondary-lightest:color-mix(in srgb,var(--color-secondary),#fff 40%);
+  --color-primary: #8734B8;
+  --color-primary-dark: color-mix(in srgb, var(--color-primary), #000 10%);
+  --color-primary-darker: color-mix(in srgb, var(--color-primary), #000 25%);
+  --color-primary-darkest: color-mix(in srgb, var(--color-primary), #000 40%);
+  --color-primary-darkest2: color-mix(in srgb, var(--color-primary), #000 55%);
+  --color-primary-darkest3: color-mix(in srgb, var(--color-primary), #000 75%);
+  --color-primary-light: color-mix(in srgb, var(--color-primary), #fff 10%);
+  --color-primary-lighter: color-mix(in srgb, var(--color-primary), #fff 25%);
+  --color-primary-lightest: color-mix(in srgb, var(--color-primary), #fff 40%);
+  --color-primary-lightest2: color-mix(in srgb, var(--color-primary), #fff 55%);
+  --color-primary-lightest3: color-mix(in srgb, var(--color-primary), #fff 85%);
+  --color-secondary: #1BBDA7;
+  --color-secondary-dark: color-mix(in srgb, var(--color-secondary), #000 10%);
+  --color-secondary-darker: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #000 25%
+  );
+  --color-secondary-darkest: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #000 40%
+  );
+  --color-secondary-darkest2: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #000 55%
+  );--color-secondary-darkest3: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #000 75%
+  );
+  --color-secondary-light: color-mix(in srgb, var(--color-secondary), #fff 10%);
+  --color-secondary-lighter: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #fff 25%
+  );
+  --color-secondary-lightest: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #fff 40%
+  );
+  --color-secondary-lightest2: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #fff 55%
+  );
+  --color-secondary-lightest3: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #fff 85%
+  );
 
-  --color-primary-bg:color-mix(in srgb, var(--color-primary) 50%, transparent);
-  --color-secondary-bg: color-mix(in srgb, var(--color-secondary) 50%, transparent);
+  --color-primary-bg: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --color-secondary-bg: color-mix(
+    in srgb,
+    var(--color-secondary) 20%,
+    transparent
+  );
 
-  --color-hover: color-mix(in srgb,var(--color-primary),#000 20%);
+  --color-hover: color-mix(in srgb, var(--color-primary), #000 20%);
+
+  --background-gradient-color1:color-mix(in srgb, var(--color-primary), #fff 75%);
+  --background-gradient-color2:color-mix(in srgb, var(--color-primary), #fff 90%);
+  --background-gradient-color3:color-mix(
+    in srgb,
+    var(--color-primary-lightest3),
+    var(--color-secondary-lightest3) 50%
+  );
+  --background-gradient-color4:color-mix(in srgb, var(--color-secondary), #fff 90%);
+  --background-gradient-color5:color-mix(in srgb, var(--color-secondary), #fff 75%);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -41,37 +92,98 @@
 
 .dark {
   --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-    --color-primary: #4e307a;
-    --color-primary-dark:color-mix(in srgb,var(--color-primary),#000 10%);
-    --color-primary-darker:color-mix(in srgb,var(--color-primary),#000 25%);
-    --color-primary-darkest:color-mix(in srgb,var(--color-primary),#000 40%);
-    --color-primary-light:color-mix(in srgb,var(--color-primary),#fff 10%);
-    --color-primary-lighter:color-mix(in srgb,var(--color-primary),#fff 25%);
-    --color-primary-lightest:color-mix(in srgb,var(--color-primary),#fff 40%);
-    --color-secondary: #05d3ac;
-    --color-secondary-dark:color-mix(in srgb,var(--color-secondary),#000 10%);
-    --color-secondary-darker:color-mix(in srgb,var(--color-secondary),#000 25%);
-    --color-secondary-darkest:color-mix(in srgb,var(--color-secondary),#000 40%);
-    --color-secondary-light:color-mix(in srgb,var(--color-secondary),#fff 10%);
-    --color-secondary-lighter:color-mix(in srgb,var(--color-secondary),#fff 25%);
-    --color-secondary-lightest:color-mix(in srgb,var(--color-secondary),#fff 40%);
-  
-    --color-primary-bg:color-mix(in srgb, var(--color-primary) 50%, transparent);
-    --color-secondary-bg: color-mix(in srgb, var(--color-secondary) 50%, transparent);
-  
-    --color-hover: color-mix(in srgb,var(--color-primary),#000 20%);
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --color-primary: #8734B8;
+  --color-primary-dark: color-mix(in srgb, var(--color-primary), #000 10%);
+  --color-primary-darker: color-mix(in srgb, var(--color-primary), #000 25%);
+  --color-primary-darkest: color-mix(in srgb, var(--color-primary), #000 40%);
+  --color-primary-darkest2: color-mix(in srgb, var(--color-primary), #000 55%);
+  --color-primary-darkest3: color-mix(in srgb, var(--color-primary), #000 75%);
+  --color-primary-light: color-mix(in srgb, var(--color-primary), #fff 10%);
+  --color-primary-lighter: color-mix(in srgb, var(--color-primary), #fff 25%);
+  --color-primary-lightest: color-mix(in srgb, var(--color-primary), #fff 40%);
+  --color-primary-lightest2: color-mix(in srgb, var(--color-primary), #fff 55%);
+  --color-primary-lightest3: color-mix(in srgb, var(--color-primary), #fff 75%);
+  --color-secondary: #1BBDA7;
+  --color-secondary-dark: color-mix(in srgb, var(--color-secondary), #000 10%);
+  --color-secondary-darker: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #000 25%
+  );
+  --color-secondary-darkest: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #000 40%
+  );
+  --color-secondary-darkest2: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #000 55%
+  );--color-secondary-darkest3: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #000 75%
+  );
+  --color-secondary-light: color-mix(in srgb, var(--color-secondary), #fff 10%);
+  --color-secondary-lighter: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #fff 25%
+  );
+  --color-secondary-lightest: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #fff 40%
+  );
+  --color-secondary-lightest2: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #fff 55%
+  );
+  --color-secondary-lightest3: color-mix(
+    in srgb,
+    var(--color-secondary),
+    #fff 75%
+  );
+
+  --color-primary-bg: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  --color-secondary-bg: color-mix(
+    in srgb,
+    var(--color-secondary) 30%,
+    transparent
+  );
+
+  --color-hover: color-mix(in srgb, var(--color-primary), #000 20%);
+
+  --background-gradient-color1:color-mix(in srgb, var(--color-primary), #000 70%);
+  --background-gradient-color2:color-mix(in srgb, var(--color-primary), #000 90%);
+  --background-gradient-color3:color-mix(
+    in srgb,
+    var(--color-primary-darkest3),
+    var(--color-secondary-darkest3) 50%
+  );
+  --background-gradient-color4:color-mix(in srgb, var(--color-secondary), #000 90%);
+  --background-gradient-color5:color-mix(in srgb, var(--color-secondary), #000 70%);
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
+    315deg,
+    var(--background-gradient-color1) 0%,
+    var(--background-gradient-color2) 30%,
+    var(--background-gradient-color3) 50%,
+    var(--background-gradient-color4) 70%,
+    var(--background-gradient-color5) 100%
+  );
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {

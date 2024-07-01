@@ -15,7 +15,7 @@ blogs page:
     - all articles with filters
 contact me page:
     - all social media links 
-    - contact me form;
+    - contact me form
 project page:
     - project details
     - sreenshots

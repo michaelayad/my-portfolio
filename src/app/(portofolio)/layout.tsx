@@ -6,7 +6,7 @@ export default function PortfolioLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="md:container mx-auto">
+    <div className="">
       <NavBar />
       {children}
     </div>
