@@ -148,10 +148,10 @@
     #fff 75%
   );
 
-  --color-primary-bg: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  --color-primary-bg: color-mix(in srgb, var(--color-primary-darkest2) 40%, transparent);
   --color-secondary-bg: color-mix(
     in srgb,
-    var(--color-secondary) 30%,
+    var(--color-secondary-darkest2) 40%,
     transparent
   );
 

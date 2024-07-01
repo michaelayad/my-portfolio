@@ -1,6 +1,6 @@
 Home Page:
-    - services i do 
-    - small analysis (projects number , experiences year , client numbers)
+    - services i do (done)
+    - small analysis (projects number , experiences year , client numbers) (done)
     - github tracking
     - main skills 
     - feature projects
