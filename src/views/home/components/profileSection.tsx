@@ -5,7 +5,7 @@ import SocialMediaComponent from "./socialMediaComponent";
 
 export default function ProfileSection() {
   return (
-    <div className="md:container mx-auto grid  grid-cols-5 gap-10 py-36 px-5 md:px-0">
+    <div className="md:container mx-auto grid  grid-cols-5 gap-10 py-20 px-5 md:px-0">
       <div
         className={` col-span-5 md:col-span-3 py-7 order-2 md:order-1 flex flex-col justify-between`}
       >

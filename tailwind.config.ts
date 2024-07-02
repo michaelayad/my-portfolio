@@ -36,6 +36,8 @@ const config: Config = {
         "secondary-lightest": "var(--color-secondary-lightest)",
         "primary-bg": "var(--color-primary-bg)",
         "secondary-bg": "var(--color-secondary-bg)",
+        "primary-bg2": "var(--color-primary-bg2)",
+        "secondary-bg2": "var(--color-secondary-bg2)",
         hover:"var(--color-hover)",
       },
     },

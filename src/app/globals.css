@@ -67,6 +67,13 @@
     transparent
   );
 
+  --color-primary-bg2: color-mix(in srgb, var(--color-primary) 50%, transparent);
+  --color-secondary-bg2: color-mix(
+    in srgb,
+    var(--color-secondary) 50%,
+    transparent
+  );
+
   --color-hover: color-mix(in srgb, var(--color-primary), #000 20%);
 
   --background-gradient-color1:color-mix(in srgb, var(--color-primary), #fff 75%);
@@ -155,6 +162,13 @@
     transparent
   );
 
+  --color-primary-bg2: color-mix(in srgb, var(--color-primary) 70%, transparent);
+  --color-secondary-bg2: color-mix(
+    in srgb,
+    var(--color-secondary) 70%,
+    transparent
+  );
+
   --color-hover: color-mix(in srgb, var(--color-primary), #000 20%);
 
   --background-gradient-color1:color-mix(in srgb, var(--color-primary), #000 70%);
@@ -173,9 +187,15 @@ body {
   background: linear-gradient(
     315deg,
     var(--background-gradient-color1) 0%,
-    var(--background-gradient-color2) 30%,
+    var(--background-gradient-color2) 10%,
+    var(--background-gradient-color3) 20%,
+    var(--background-gradient-color4) 30%,
+    var(--background-gradient-color5) 40%,
     var(--background-gradient-color3) 50%,
-    var(--background-gradient-color4) 70%,
+    var(--background-gradient-color1) 60%,
+    var(--background-gradient-color2) 70%,
+    var(--background-gradient-color3) 80%,
+    var(--background-gradient-color4) 90%,
     var(--background-gradient-color5) 100%
   );
   /* background: linear-gradient(

@@ -2,9 +2,9 @@ Home Page:
     - services i do (done)
     - small analysis (projects number , experiences year , client numbers) (done)
     - github tracking
-    - main skills 
-    - feature projects
-    - clients feadBack
+    - main skills (done)
+    - feature projects (done)
+    - clients feadBack 
 about Page : 
     - professional experiences
     - education  

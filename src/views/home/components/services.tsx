@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Image from "next/image";
-import SocialMediaComponent from "./socialMediaComponent";
 
 export default function Services() {
   return (
-    <div className="w-full bg-primary-bg py-10 px-5">
+    <div className="w-full bg-primary-bg pt-10 pb-20 px-5 ">
       <div className="md:container mx-auto ">
         <h1 className={`font-kodeMono text-lg font-bold text-primary`}>
           Services
