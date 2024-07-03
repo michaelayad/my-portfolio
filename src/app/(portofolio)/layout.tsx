@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/footer";
 
 export default function PortfolioLayout({
   children,
@@ -9,6 +10,7 @@ export default function PortfolioLayout({
     <div className="">
       <NavBar />
       {children}
+      <Footer/>
     </div>
   );
 }

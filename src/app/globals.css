@@ -67,10 +67,10 @@
     transparent
   );
 
-  --color-primary-bg2: color-mix(in srgb, var(--color-primary) 50%, transparent);
+  --color-primary-bg2: color-mix(in srgb, var(--color-primary) 70%, transparent);
   --color-secondary-bg2: color-mix(
     in srgb,
-    var(--color-secondary) 50%,
+    var(--color-secondary) 70%,
     transparent
   );
 

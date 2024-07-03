@@ -52,18 +52,19 @@ export default function Projects() {
                 alt={item.title}
                 className="w-full h-full object-cover group-hover:blur-md rounded-lg transition-all duration-500 ease-in-out"
               />
-              <div className="w-full h-0  absolute bottom-0 left-0 bg-primary-bg2 group-hover:h-[90%]  transition-all duration-500 ease-in-out overflow-hidden rounded-lg">
+              <div className="w-full h-0   absolute bottom-0 left-0 bg-primary-bg2 group-hover:h-[90%]  transition-all duration-500 ease-in-out overflow-hidden rounded-lg">
                 {" "}
-                <div className="p-3">
-                  <h1 className="text-2xl font-bold text-center py-2">
+                <div className="h-full p-3 flex flex-col gap-y-5">
+                  <h1 className="text-2xl font-bold text-center">
                     {item.title}
                   </h1>
-                  <div className="text-md font-medium  text-neutral-300 max-h-[60%] overflow-hidden py-2">
+                  <div className="text-md font-medium  text-neutral-300 max-h-[50%] overflow-hidden ">
                     {item.discription}{" "}
                   </div>
                   <div className="h-[1px] bg-primary-darkest shadow-lg"></div>
+                  <div className="grow flex flex-col content-end ">
                   <h3 className="text-lg font-semibold ">Topics</h3>
-                  <div className="flex flex-row gap-2 flex-wrap">
+                  <div className="flex flex-row gap-2 flex-wrap ">
                     {item.topics.map((topic, ind) => (
                       <div
                         className="bg-primary-darkest text-white rounded-lg px-2"
@@ -73,6 +74,8 @@ export default function Projects() {
                       </div>
                     ))}
                   </div>
+                  </div>
+                  
                 </div>
               </div>
             </div>

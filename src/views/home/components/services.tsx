@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <div className="w-full bg-primary-bg pt-10 pb-20 px-5 shadow-md shadow-primary-darker ">
+    <div className="w-full bg-primary-bg pt-10 pb-20 px-5 shadow-md shadow-primary ">
       <div className="md:container mx-auto ">
         <h1 className={`font-kodeMono text-lg font-bold text-primary`}>
           Services

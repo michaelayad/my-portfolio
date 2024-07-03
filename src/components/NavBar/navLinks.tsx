@@ -2,7 +2,9 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
+import NavLogo from "./logo";
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
@@ -69,41 +71,148 @@ const links = [
   },
 ];
 
-export default function NavLinks() {
+export default function NavLinks({ isSticky }: { isSticky: boolean }) {
+  const [showMenu, setShowMenu] = useState(false);
   const pathname = usePathname();
+  const router = useRouter()
+ 
+  const goTo=(link:string)=>{
+    setShowMenu(false)
+    router.push(link, { scroll: false })
+
+  }
   return (
-    <div className="flex flex-row gap-x-3">
-      {links.map((link) => {
-        const LinkIcon = link.icon;
-        return (
-          <Link
-            key={link.name}
-            href={link.href}
+    <>
+      <div className="hidden  md:flex flex-row gap-x-3">
+        {links.map((link) => {
+          const LinkIcon = link.icon;
+          return (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={clsx(
+                "flex gap-2 px-3 text-md font-medium items-center hover:text-primary group",
+                {
+                  "text-primary": pathname === link.href,
+                },
+                {
+                  "text-white hover:text-secondary":
+                    isSticky && pathname !== link.href,
+                },
+                {
+                  "text-secondary hover:text-secondary":
+                    isSticky && pathname === link.href,
+                }
+              )}
+            >
+              {/* {LinkIcon} */}
+              <div className="flex flex-col gap-0">
+                <p className={clsx(" md:block  ")}>{link.name}</p>
+                <span
+                  className={clsx(
+                    {
+                      "w-0": pathname !== link.href,
+                    },
+                    " md:block  h-[2px] bg-primary transition-* duration-300 group-hover:w-full group-hover:ease-linear",
+                    {
+                      "w-full": pathname === link.href,
+                    },
+                    {
+                      "bg-secondary hover:bg-secondary": isSticky,
+                    }
+                  )}
+                ></span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+      <div className="md:hidden">
+        <button
+          onClick={() => {
+            setShowMenu(true);
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="size-10 text-primary"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+            />
+          </svg>
+        </button>
+      </div>
+      {
+        <div
+          className={clsx(
+            "fixed top-0 right-0 h-0 w-0 bg-primary transition-all duration-500 ease-in-out",
+            {
+              "h-screen w-screen": showMenu,
+            }
+          )}
+        >
+          <div className="flex flex-row justify-between py-5  px-3 md-px-0">
+            <div
+              className={clsx(
+                "opacity-0 transition-all delay-500 ease-in-out ",
+                {
+                  "opacity-100": showMenu,
+                }
+              )}
+            >
+              {" "}
+              <NavLogo isSticky={true} />
+            </div>
+            <button
+              onClick={() => {
+                setShowMenu(false);
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="size-10 text-secondary"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
             className={clsx(
-              "flex gap-2 px-3 text-md font-medium items-center hover:text-primary group",
+              "h-[calc(100%-80px)] max-h-screen flex flex-col w-100  opacity-0 gap-10 transition-all duration-500 ease-in-out",
               {
-                "text-primary": pathname === link.href,
+                "opacity-100": showMenu,
               }
             )}
           >
-            {/* {LinkIcon} */}
-            <div className="flex flex-col gap-0">
-              <p className={clsx(" md:block  ")}>{link.name}</p>
-              <span
+            {links.map((item, index) => (
+              <button
+                onClick={()=>{goTo(item.href )}}
+                key={index}
                 className={clsx(
-                  {
-                    "w-0": pathname !== link.href,
-                  },
-                  " md:block  h-[2px] bg-primary transition-* duration-300 group-hover:w-full group-hover:ease-linear",
-                  {
-                    "w-full": pathname === link.href,
-                  }
+                  "text-center text-secondary text-2xl font-bold py-3 shadow-lg"
                 )}
-              ></span>
-            </div>
-          </Link>
-        );
-      })}
-    </div>
+              >
+                {item.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      }
+    </>
   );
 }
