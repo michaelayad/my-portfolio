@@ -132,6 +132,7 @@ export default function NavLinks({ isSticky }: { isSticky: boolean }) {
           onClick={() => {
             setShowMenu(true);
           }}
+          className="text-primary"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +140,7 @@ export default function NavLinks({ isSticky }: { isSticky: boolean }) {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            className="size-10 text-primary"
+            className={clsx("size-10 ",{"text-secondary":isSticky})} 
           >
             <path
               stroke-linecap="round"
@@ -152,7 +153,7 @@ export default function NavLinks({ isSticky }: { isSticky: boolean }) {
       {
         <div
           className={clsx(
-            "fixed top-0 right-0 h-0 w-0 bg-primary transition-all duration-500 ease-in-out",
+            "fixed top-0 right-0 h-0 w-0 bg-primary dark:bg-primary-darkest transition-all duration-500 ease-in-out",
             {
               "h-screen w-screen": showMenu,
             }
