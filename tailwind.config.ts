@@ -18,6 +18,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'feedback': "var(--feedback-img)",
       },
       colors: {
         primary: "var(--color-primary)",
@@ -40,6 +41,18 @@ const config: Config = {
         "secondary-bg2": "var(--color-secondary-bg2)",
         hover:"var(--color-hover)",
       },
+      keyframes: {
+        specially: {
+          '0%':{opacity:'0',transform:"scale(0.90) rotate(20deg)"},
+          '25%': { opacity:'0.5',transform:"scale(0.95) rotate(15deg)" },
+          '50%': { opacity:'0.7',transform:"scale(1) rotate(10deg)" },
+          '75%': { opacity:'0.9',transform:"scale(1.03) rotate(5deg)" },
+          '100%': { opacity:'1',transform:"scale(1) " },
+        }
+      },
+      animation: {
+        'specially': 'specially 0.7s linear  1',
+      }
     },
   },
   plugins: [],

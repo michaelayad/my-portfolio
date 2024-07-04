@@ -35,7 +35,7 @@ const projectsList = [
 
 export default function Projects() {
   return (
-    <div className="w-full px-5 py-10">
+    <div className="w-full px-5 py-10 ">
       <div className="md:container mx-auto ">
         <h1 className={`font-kodeMono text-lg font-bold text-primary`}>
           Projects

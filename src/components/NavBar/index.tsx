@@ -20,7 +20,7 @@ export default function NavBar() {
     <>
       <div
         className={clsx(
-          " w-full z-50  sticky top-0  transition duration-700 ease-in-out ",
+          " w-full z-50 sticky top-0  transition duration-700 ease-in-out ",
           { "bg-primary dark:bg-primary-darkest shadow-sm shadow-primary dark:shadow-primary-darkest": isSticky }
         )}
       >

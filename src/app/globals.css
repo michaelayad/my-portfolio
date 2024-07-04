@@ -85,6 +85,8 @@
   );
   --background-gradient-color4:color-mix(in srgb, var(--color-secondary), #fff 90%);
   --background-gradient-color5:color-mix(in srgb, var(--color-secondary), #fff 75%);
+
+  --feedback-img:url('/images/backgrounds/feedback-white.svg');
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -180,6 +182,9 @@
   );
   --background-gradient-color4:color-mix(in srgb, var(--color-secondary), #000 90%);
   --background-gradient-color5:color-mix(in srgb, var(--color-secondary), #000 70%);
+
+  --feedback-img:url('/images/backgrounds/feedback-black.svg');
+
 }
 
 body {
