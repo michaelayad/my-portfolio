@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -30,15 +32,18 @@ export default function SocialMediaComponent() {
   return (
     <>
       {socialMediaList.map((item, index) => (
-        <Link
+        <motion.a
           key={index}
           href={item.url}
           target="_blank"
           rel="noopener"
+          initial={{ scale: 0, rotate: "90deg" }}
+          whileInView={{ scale: 1, rotate: "0deg" }}
+          viewport={{ margin: "-150px 0px -100px" }}
           className={`h-10 w-10 p-2 border-2 rounded-full text-primary border-primary hover:text-white hover:dark:text-black hover:border-transparent hover:bg-primary`}
         >
           {item.icon}
-        </Link>
+        </motion.a>
       ))}
     </>
   );
