@@ -80,8 +80,8 @@ export default function FeedBacks() {
                   { "visible animate-specially": index === activeFeedBack }
                 )}
               >
-                <div className="w-full h-full shadow-md bg-white shadow-primary rounded-md"></div>
-                <div className="absolute top-0 left-5 h-full w-[calc(100%-40px)] bg-white shadow-xl drop-shadow-lg shadow-primary rounded-md text-center hover:scale-[1.005] transition-all duration-300 ease-in-out">
+                <div className="w-full h-full shadow-md bg-white dark:bg-black shadow-primary rounded-md"></div>
+                <div className="absolute top-0 left-5 h-full w-[calc(100%-40px)] bg-white dark:bg-black shadow-xl drop-shadow-lg shadow-primary rounded-md text-center hover:scale-[1.005] transition-all duration-300 ease-in-out">
                   <div className="w-20 h-20 rounded-full mx-auto border-2 border-primary bg-white dark:bg-black relative -top-10">
                     <img
                       src={item.image}

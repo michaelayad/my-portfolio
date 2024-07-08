@@ -32,7 +32,7 @@ export default function ProfileSection() {
           <motion.h1
             initial={{ scale: 1.1 }}
             whileInView={{ scale: 1 }}
-            viewport={{ margin: "-200px 0px 0px" }}
+            viewport={{ margin: "-200px 0px -50px" }}
             className={` text-2xl font-bold `}
           >
             Hi, I&apos;m Michael

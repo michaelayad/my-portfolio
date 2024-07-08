@@ -84,7 +84,7 @@ export default function Services() {
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ margin: "-200px 0px -50px" }}
+            viewport={{ margin: "-200px 0px -5px" }}
             className={` col py-7 px-5 bg-white dark:bg-black shadow-lg rounded-lg group hover:shadow-2xl hover:scale-[1.04] transition duration-300 ease-in-out`}
           >
             <img
@@ -105,7 +105,7 @@ export default function Services() {
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ margin: "-200px 0px -50px" }}
+            viewport={{ margin: "-200px 0px -5px" }}
             className={` col py-7 px-5 bg-white dark:bg-black shadow-xl rounded-lg group hover:shadow-2xl hover:scale-[1.04] transition duration-300 ease-in-out`}
           >
             <img
@@ -128,7 +128,7 @@ export default function Services() {
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ margin: "-200px 0px -50px" }}
+            viewport={{ margin: "-200px 0px -5px" }}
             className={` col py-7 px-5 bg-white dark:bg-black shadow-xl rounded-lg group hover:shadow-2xl hover:scale-[1.04] transition duration-300 ease-in-out`}
           >
             <img

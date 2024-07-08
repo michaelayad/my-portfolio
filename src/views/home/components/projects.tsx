@@ -48,7 +48,7 @@ export default function Projects() {
         <motion.h1
           initial={{ opacity: 0, translateX: -20 }}
           whileInView={{ opacity: 1, translateX: 0 }}
-          viewport={{ margin: "-150px 0px -100px" }}
+          viewport={{ margin: "-200px 0px -100px" }}
           className={`font-kodeMono text-lg font-bold text-primary`}
         >
           Projects
@@ -56,7 +56,7 @@ export default function Projects() {
         <motion.h1
           initial={{ opacity: 0, translateX: -20 }}
           whileInView={{ opacity: 1, translateX: 0 }}
-          viewport={{ margin: "-150px 0px -100px" }}
+          viewport={{ margin: "-200px 0px -100px" }}
           className={` text-4xl font-bold `}
         >
           My Creative Works , Latest{" "}
@@ -64,7 +64,7 @@ export default function Projects() {
             initial={{ rotate: "45deg", opacity: 0 }}
             whileInView={{ rotate: "0deg", opacity: 1 }}
             transition={{ delay: 0.5 }}
-            viewport={{ margin: "-150px 0px -100px" }}
+            viewport={{ margin: "-200px 0px -100px" }}
             className="text-primary font-kodeMono"
           >
             Projects
@@ -78,7 +78,7 @@ export default function Projects() {
                 alt={item.title}
                 initial={{ opacity: 0, height: 0 }}
                 whileInView={{ opacity: 1, height: "100%" }}
-                viewport={{ margin: "-150px 0px -100px" }}
+                viewport={{ margin: "-200px 0px -100px" }}
                 className="w-full h-full object-cover group-hover:blur-md rounded-lg transition-all duration-500 ease-in-out"
               />
               <div className="w-full h-0   absolute bottom-0 left-0 bg-primary-bg2 group-hover:h-[90%]  transition-all duration-500 ease-in-out overflow-hidden rounded-lg">

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import {  Kode_Mono  } from "next/font/google";
+import { Kode_Mono } from "next/font/google";
 import "./globals.css";
+import clsx from "clsx";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,8 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="select-none">
-      <body className={` ${kodeMono.variable} ${inter.variable} min-h-screen` }>{children}</body>
+    <html lang="en" className={clsx("select-none")}>
+      <body className={` ${kodeMono.variable} ${inter.variable} min-h-screen`}>
+        {children}
+      </body>
     </html>
   );
 }
