@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 
 export default function SwitchMode() {
   const [isDark, setDark] = useState(
-    localStorage.getItem("mode") === "dark" ? true : false
+    typeof window !== 'undefined' && window.localStorage&&localStorage.getItem("mode") === "dark" ? true : false
   );
   const togglemMode = () => {
     localStorage.setItem("mode", isDark ? "" : "dark");
@@ -18,6 +18,7 @@ export default function SwitchMode() {
   };
 
   useEffect(() => {
+    
     isDark
       ? document.body.classList.add("dark")
       : document.body.classList.remove("dark");
