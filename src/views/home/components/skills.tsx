@@ -54,7 +54,7 @@ export default function Skills() {
   return (
     <div className="w-full px-5">
       <div className="md:container mx-auto md:px-20">
-        <div className="relative -top-16 bg-white dark:bg-black p-5  shadow-2xl rounded-2xl">
+        <div className="relative -top-16 bg-white-bg dark:bg-black p-5  shadow-2xl rounded-2xl">
           <motion.h1
             initial={{ opacity: 0, translateX: -20 }}
             whileInView={{ opacity: 1, translateX: 0 }}

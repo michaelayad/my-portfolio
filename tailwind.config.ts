@@ -39,6 +39,8 @@ const config: Config = {
         "secondary-bg": "var(--color-secondary-bg)",
         "primary-bg2": "var(--color-primary-bg2)",
         "secondary-bg2": "var(--color-secondary-bg2)",
+        "white-bg":"var(--color-white-bg)",
+        "hover-white-bg":"var(--color-hover-white-bg)",
         hover:"var(--color-hover)",
       },
       keyframes: {

@@ -85,7 +85,7 @@ export default function Services() {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ margin: "-200px 0px -5px" }}
-            className={` col py-7 px-5 bg-white dark:bg-black shadow-lg rounded-lg group hover:shadow-2xl hover:scale-[1.04] transition duration-300 ease-in-out`}
+            className={` col py-7 px-5 bg-white-bg dark:bg-black shadow-lg rounded-lg group hover:shadow-2xl hover:scale-[1.04] hover:bg-hover-white-bg hover:dark:bg-[#090909] transition duration-300 ease-in-out`}
           >
             <img
               src="./images/ux-design.png"
@@ -106,7 +106,7 @@ export default function Services() {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ margin: "-200px 0px -5px" }}
-            className={` col py-7 px-5 bg-white dark:bg-black shadow-xl rounded-lg group hover:shadow-2xl hover:scale-[1.04] transition duration-300 ease-in-out`}
+            className={` col py-7 px-5 bg-white-bg dark:bg-black shadow-xl rounded-lg group hover:shadow-2xl hover:scale-[1.04] hover:bg-hover-white-bg hover:dark:bg-[#090909] transition duration-300 ease-in-out`}
           >
             <img
               src="./images/responsive-website.png"
@@ -129,7 +129,7 @@ export default function Services() {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ margin: "-200px 0px -5px" }}
-            className={` col py-7 px-5 bg-white dark:bg-black shadow-xl rounded-lg group hover:shadow-2xl hover:scale-[1.04] transition duration-300 ease-in-out`}
+            className={` col py-7 px-5 bg-white-bg dark:bg-black shadow-xl rounded-lg group hover:shadow-2xl hover:scale-[1.04] hover:bg-hover-white-bg hover:dark:bg-[#090909] transition duration-300 ease-in-out`}
           >
             <img
               src="./images/backend.png"

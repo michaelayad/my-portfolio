@@ -86,6 +86,9 @@
   --background-gradient-color4:color-mix(in srgb, var(--color-secondary), #fff 90%);
   --background-gradient-color5:color-mix(in srgb, var(--color-secondary), #fff 75%);
 
+  --color-white-bg:#f5f5f5;
+  --color-hover-white-bg:#fafafa;
+  
   --feedback-img:url('/images/backgrounds/feedback-white.svg');
 }
 
@@ -183,12 +186,16 @@
   --background-gradient-color4:color-mix(in srgb, var(--color-secondary), #000 90%);
   --background-gradient-color5:color-mix(in srgb, var(--color-secondary), #000 70%);
 
+  --color-white-bg:#f5f5f5;
+  --color-hover-white-bg:#fafafa;
+
   --feedback-img:url('/images/backgrounds/feedback-black.svg');
 
 }
 
 body {
   color: rgb(var(--foreground-rgb));
+  background-color: #f3f3f3;
   background: linear-gradient(
     315deg,
     var(--background-gradient-color1) 0%,
