@@ -197,7 +197,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background-color: #f3f3f3;
   background: linear-gradient(
-    315deg,
+    180deg,
     var(--background-gradient-color1) 0%,
     var(--background-gradient-color2) 10%,
     var(--background-gradient-color3) 20%,
