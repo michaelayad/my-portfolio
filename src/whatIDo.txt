@@ -4,7 +4,7 @@ Home Page:
     - github tracking
     - main skills (done)
     - feature projects (done)
-    - clients feadBack 
+    - clients feadBack (done)
 about Page : 
     - professional experiences
     - education  
@@ -21,3 +21,12 @@ project page:
     - sreenshots
 article page:   
     - article details             
+------------------------------------
+DashBoard:
+    - login page
+    - personal information page
+
+------------------------------------
+Apis:
+    - login route
+    - home route

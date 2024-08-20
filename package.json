@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3009",
+    "dev": "next dev -p 3010",
     "build": "next build",
-    "start": "next start -p 3009",
+    "start": "next start -p 3010",
     "lint": "next lint"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "flowbite": "^2.5.1",
     "framer-motion": "^11.2.13",
     "next": "14.2.4",
     "next-themes": "^0.3.0",
