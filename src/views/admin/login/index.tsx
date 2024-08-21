@@ -6,11 +6,11 @@ import LoginForm from "@/views/admin/login/components/loginForm";
 import LoginMd from "./images/admin/login-md.svg";
 export default function Login() {
   return (
-    <div className=" w-full min-h-lvh flex flex-col md:flex-row bg-white-bg">
-      <div className="w-full md:w-[50%] order-2 md:order-1 min-h-full bg-white-bg flex flex-col md:py-10 gap-5 items-center">
+    <div className=" w-full min-h-lvh flex flex-col md:flex-row bg-white-bg dark:bg-dark-bg ">
+      <div className="w-full md:w-[50%] order-2 md:order-1 min-h-full bg-white-bg dark:bg-dark-bg flex flex-col md:py-10 gap-5 items-center">
         <LoginForm />
       </div>
-      <div className="w-full md:w-[50%]  order-1 md:order-2 min-h-full bg-white-bg md:bg-primary-bg  flex flex-col md:y-10 gap-5 items-center">
+      <div className="w-full md:w-[50%]  order-1 md:order-2 min-h-full bg-white-bg  md:bg-primary-bg dark:bg-dark-bg md:dark:bg-dark-hover-bg flex flex-col md:y-10 gap-5 items-center">
         <Link
           href="/"
           className={clsx(

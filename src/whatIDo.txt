@@ -1,3 +1,7 @@
+shared:
+    - make server mode & client mode settings (same as vieux dashboard)
+    - change mode same as vieux dashboard
+
 Home Page:
     - services i do (done)
     - small analysis (projects number , experiences year , client numbers) (done)
@@ -20,7 +24,7 @@ project page:
     - project details
     - sreenshots
 article page:   
-    - article details             
+    - article details     
 ------------------------------------
 DashBoard:
     - login page

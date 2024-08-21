@@ -16,12 +16,11 @@ export default function SwitchMode() {
     localStorage.setItem("mode", isDark ? "" : "dark");
     setDark(!isDark);
   };
-
   useEffect(() => {
-    
+    console.log("mmm",isDark)
     isDark
-      ? document.body.classList.add("dark")
-      : document.body.classList.remove("dark");
+      ? ( document.body.classList.add("dark"))
+      : (document.body.classList.remove("dark"));
   }, [isDark]);
   return (
     <>

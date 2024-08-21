@@ -8,14 +8,14 @@ export default function LoginForm() {
         <div className="mb-5">
           <label
             htmlFor="email"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm font-medium "
           >
             Your email
           </label>
           <input
             type="email"
             id="email"
-            className="bg-white border border-primary-lightest text-gray-900 text-sm rounded-lg focus:ring-primary focus:outline-primary focus:border-primary block w-full p-2.5 "
+            className=" bg-white-bg border border-primary-lightest text-sm rounded-lg focus:ring-primary focus:outline-primary focus:border-primary block w-full p-2.5 "
             placeholder="write your email"
             required
           />
@@ -23,20 +23,21 @@ export default function LoginForm() {
         <div className="mb-5">
           <label
             htmlFor="password"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm font-medium "
           >
             Your password
           </label>
           <input
             type="password"
             id="password"
-            className="bg-white border border-primary-lightest text-gray-900 text-sm rounded-lg focus:ring-primary focus:outline-primary focus:border-primary block w-full p-2.5"
+            className="bg-white-bg border border-primary-lightest  text-sm rounded-lg focus:ring-primary focus:outline-primary focus:border-primary block w-full p-2.5"
             required
+            placeholder="write your password"
           />
         </div>
         <button
           type="submit"
-          className="mx-auto text-white bg-primary hover:bg-hover focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-lg px-16 py-2.5 text-center "
+          className="text-white mx-auto bg-primary hover:bg-hover focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-lg px-16 py-2.5 text-center "
         >
           Submit
         </button>

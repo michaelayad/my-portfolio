@@ -88,6 +88,9 @@
 
   --color-white-bg:#f5f5f5;
   --color-hover-white-bg:#fafafa;
+
+  --color-dark-bg:color-mix(in srgb, var(--color-primary), #000 85%);
+  --color-hover-dark-bg:color-mix(in srgb, var(--color-primary), #000 75%);
   
   --feedback-img:url('/images/backgrounds/feedback-white.svg');
 }
@@ -188,6 +191,9 @@
 
   --color-white-bg:#f5f5f5;
   --color-hover-white-bg:#fafafa;
+
+  --color-dark-bg:color-mix(in srgb, var(--color-primary), #000 85%);
+  --color-hover-dark-bg:color-mix(in srgb, var(--color-primary), #000 75%);
 
   --feedback-img:url('/images/backgrounds/feedback-black.svg');
 

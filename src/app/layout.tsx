@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Kode_Mono } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
+import Mode from "./mode";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx("select-none")}>
       <body className={` ${kodeMono.variable} ${inter.variable} min-h-screen`}>
+        <Mode/>
         {children}
       </body>
     </html>
