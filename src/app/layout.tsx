@@ -4,6 +4,7 @@ import { Kode_Mono } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import Mode from "./mode";
+import { ToastProvider } from "@/providers/toastProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={` ${kodeMono.variable} ${inter.variable} min-h-screen`}>
         <Mode/>
         {children}
+        <ToastProvider/>
       </body>
     </html>
   );
