@@ -32,5 +32,10 @@ DashBoard:
 
 ------------------------------------
 Apis:
-    - login route
+    - login route (done)
+    - profile routes
+        - add (done)
+        - getAll (done)
+        - getOne (done)
+        - updateOne (done)
     - home route

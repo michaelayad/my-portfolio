@@ -1,8 +1,9 @@
 "use client";
-import { API } from "@/services";
+import { useRouter } from "next/navigation";
 import { UserType } from "@/types/userType";
 import { joiResolver } from "@hookform/resolvers/joi";
 import Joi from "joi";
+import { signIn } from "next-auth/react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { toast } from "react-toastify";
 
@@ -25,6 +26,7 @@ const schema = Joi.object({
 });
 
 export default function LoginForm() {
+  const router = useRouter(); // Initialize useRouter
   const {
     register,
     handleSubmit,
@@ -34,16 +36,28 @@ export default function LoginForm() {
     resolver: joiResolver(schema),
   });
 
-  const onSubmit: SubmitHandler<UserType> = (data) => {
-    API.login(data)
-      .then((res) => {
-        if (res.status) {
-          toast.success(res.message);
-        } else {
-          toast.error(res.message);
-        }
-      })
-      .catch((err) => {});
+  const onSubmit: SubmitHandler<UserType> = async (data) => {
+    // Default to admin if no redirect query
+
+    try {
+      const result = await signIn("credentials", {
+        redirect: false,
+        ...data,
+      });
+
+      if (result?.error) {
+        // Handle error message from the result
+        toast.error(result.error);
+      } else if (result?.ok) {
+        // Handle successful sign-in
+        toast.success("Login successfull!");
+        router.push("/admin");
+        // Redirect or other actions
+      }
+    } catch (error) {
+      // Handle unexpected errors
+      toast.error("An unexpected error occurred");
+    }
   };
 
   return (

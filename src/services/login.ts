@@ -3,7 +3,7 @@ import { UserType } from "@/types/userType";
 
 export const loginService= async (formData:UserType) => {
     try {
-      const response = await fetch("/api/login", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/login`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

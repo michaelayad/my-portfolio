@@ -1,4 +1,5 @@
-
+import AdminNavBar from "@/components/admin/navBar";
+import AdminSideBar from "@/components/admin/sideBar";
 
 export default function PortfolioLayout({
   children,
@@ -6,10 +7,13 @@ export default function PortfolioLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="">
-      admin sideBar
-      {children}
-      
+    <div className="w-full bg-primary-bg3 min-h-lvh">
+      <AdminNavBar />
+      <AdminSideBar />
+      <div className="p-5 sm:ml-64">
+        admin sideBar
+        {children}
+      </div>
     </div>
   );
 }

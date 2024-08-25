@@ -5,6 +5,7 @@ import "./globals.css";
 import clsx from "clsx";
 import Mode from "./mode";
 import { ToastProvider } from "@/providers/toastProvider";
+import { NextAuthProvider } from "@/providers/nextAuthProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,9 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx("select-none")}>
       <body className={` ${kodeMono.variable} ${inter.variable} min-h-screen`}>
-        <Mode/>
-        {children}
-        <ToastProvider/>
+        <NextAuthProvider>
+          <Mode />
+          {children}
+          <ToastProvider />
+        </NextAuthProvider>
       </body>
     </html>
   );
