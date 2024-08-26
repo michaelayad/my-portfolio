@@ -8,29 +8,149 @@ datasource db {
 }
 
 model Admin {
-  id       Int     @id @default(autoincrement())
-  email    String  @unique
-  name     String?
-  password String
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  name      String?   @db.VarChar(255)
+  password  String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
 }
 
 model Profile {
-  id               Int            @id @default(autoincrement())
-  name             String?
-  description      String?
-  title            String?
-  image            String?
-  logo             String?
-  experience_years Int?
-  cv               String?
-  Social_Medias     Social_Media[]
+  id                      Int                      @id @default(autoincrement())
+  name                    String?                  @db.VarChar(255)
+  description             String?
+  title                   String?                  @db.VarChar(255)
+  image                   String?
+  logo                    String?
+  mainImage               String? // Main image field
+  experience_years        Int?
+  cv                      String?
+  createdAt               DateTime                 @default(now())
+  updatedAt               DateTime                @updatedAt
+  Social_Medias           Social_Media[]
+  Skills                  Skill[]
+  Client_Feadbacks        Client_Feadback[]
+  Services                Service[]
+  ProfessionalExperiences ProfessionalExperience[]
+  projects                Project[]
+  Blogs                   Blog[]
+  Topics                  Topic[]                  @relation("ProfileTopics")
+  Tags                    Tag[]                    @relation("ProfileTags")
 }
 
 model Social_Media {
-  id        Int     @id @default(autoincrement())
-  name      String?
+  id        Int       @id @default(autoincrement())
+  name      String?   @db.VarChar(255)
   link      String?
   svgIcon   String?
   profileId Int
-  profile   Profile @relation(fields: [profileId], references: [id])
+  profile   Profile   @relation(fields: [profileId], references: [id])
+  createdAt DateTime  @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Skill {
+  id          Int       @id @default(autoincrement())
+  name        String?   @db.VarChar(255)
+  level       String?   @db.VarChar(100)
+  description String?   @db.Text
+  profileId   Int
+  profile     Profile   @relation(fields: [profileId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime @updatedAt
+  projects    Project[] @relation("ProjectSkills")
+  Blogs       Blog[]    @relation("BlogSkills")
+}
+
+model Client_Feadback {
+  id          Int       @id @default(autoincrement())
+  name        String?   @db.VarChar(255)
+  position    String?   @db.VarChar(255)
+  image       String?
+  description String?
+  profileId   Int
+  profile     Profile   @relation(fields: [profileId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Service {
+  id          Int      @id @default(autoincrement())
+  name        String   @db.VarChar(255)
+  description String?  @db.Text
+  price       Float?
+  category    String?  @db.VarChar(255)
+  profileId   Int
+  profile     Profile  @relation(fields: [profileId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ProfessionalExperience {
+  id          Int       @id @default(autoincrement())
+  title       String    @db.VarChar(255)
+  company     String    @db.VarChar(255)
+  description String?   @db.Text
+  startDate   DateTime
+  endDate     DateTime
+  profileId   Int
+  profile     Profile   @relation(fields: [profileId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Project {
+  id          Int       @id @default(autoincrement())
+  name        String    @db.VarChar(255)
+  description String?   @db.Text
+  mainImage   String? // URL or path to the project's main image
+  demoLink    String? // URL to a live demo of the project
+  githubLink  String? // URL to the project's GitHub repository
+  startDate   DateTime
+  endDate     DateTime
+  profileId   Int
+  profile     Profile   @relation(fields: [profileId], references: [id])
+  Skills      Skill[]   @relation("ProjectSkills")
+  Topics      Topic[]   @relation("ProjectTopics")
+  Tags        Tag[]     @relation("ProjectTags")
+  gallery     Json? // JSON field to store gallery images as an array of URLs
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Blog {
+  id          Int       @id @default(autoincrement())
+  title       String    @db.VarChar(255)
+  content     String    @db.Text
+  author      String?   @db.VarChar(255)
+  image       String? // Main image field
+  publishedAt DateTime
+  profileId   Int
+  profile     Profile   @relation(fields: [profileId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime @updatedAt
+  Topics      Topic[]   @relation("BlogTopics")
+  Tags        Tag[]     @relation("BlogTags")
+  Skills      Skill[]   @relation("BlogSkills")
+}
+
+model Topic {
+  id        Int       @id @default(autoincrement())
+  name      String    @db.VarChar(255)
+  blogs     Blog[]    @relation("BlogTopics")
+  profiles  Profile[] @relation("ProfileTopics")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime @updatedAt
+  projects  Project[] @relation("ProjectTopics")
+}
+
+model Tag {
+  id        Int       @id @default(autoincrement())
+  name      String    @db.VarChar(255)
+  blogs     Blog[]    @relation("BlogTags")
+  profiles  Profile[] @relation("ProfileTags")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime @updatedAt
+  projects  Project[] @relation("ProjectTags")
 }
