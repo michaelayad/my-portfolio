@@ -28,6 +28,12 @@ article page:
 ------------------------------------
 DashBoard:
     - login page
+    - profiles page
+        - show 
+        - add drawer
+        - update drawer
+        - delete model
+    - social medias page
     - personal information page
 
 ------------------------------------
@@ -38,4 +44,12 @@ Apis:
         - getAll (done)
         - getOne (done)
         - updateOne (done)
+        - delete (done)
+    - social media routes
+        - add (done)
+        - get one  (done)
+        - get with pagination and filters (done)
+        - get by profile id (done)
+        - update  (done)
+        - delete  (done)
     - home route

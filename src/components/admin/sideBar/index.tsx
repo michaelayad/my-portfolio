@@ -1,4 +1,18 @@
+"use client"
+import ProfilesIcon from "@/libs/assets/icons/profilesIcon";
+import clsx from "clsx";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
 export default function AdminSideBar() {
+
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
+
+  const isActive = currentPath.startsWith("/admin/profiles");
   return (
     <>
       <aside
@@ -25,6 +39,18 @@ export default function AdminSideBar() {
                 </svg>
                 <span className="ms-3">Dashboard</span>
               </a>
+            </li>
+            <li>
+              <Link
+                href="/admin/profiles"
+                className={clsx(
+                  "flex items-center p-2 rounded-lg group",
+                  "text-gray-900 dark:text-white hover:bg-primary-bg3 dark:hover:bg-primary-bg2",
+                  { "bg-primary-bg3 dark:bg-primary-bg2": isActive } // Conditionally apply the active background
+                )}              >
+                <ProfilesIcon/>
+                <span className="ms-3">Profiles</span>
+              </Link>
             </li>
             <li>
               <a

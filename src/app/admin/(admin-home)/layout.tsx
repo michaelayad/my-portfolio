@@ -10,9 +10,8 @@ export default function PortfolioLayout({
     <div className="w-full bg-primary-bg3 min-h-lvh">
       <AdminNavBar />
       <AdminSideBar />
-      <div className="p-5 sm:ml-64">
-        admin sideBar
-        {children}
+      <div className="p-5 sm:ml-64 flex flex-row justify-center">
+        <div className=" w-full max-w-[1400px] ">{children}</div>{" "}
       </div>
     </div>
   );

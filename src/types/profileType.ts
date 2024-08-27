@@ -1,9 +1,10 @@
 export type ProfileType = {
   id?: Number;
   name?: string;
-  description?: string;
+  bio?: string;
   title?: string;
   image?: string;
+  imageUrl?: string;
   logo?: string;
   cv?: string;
   experience_years?: number;
