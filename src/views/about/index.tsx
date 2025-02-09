@@ -1,10 +1,13 @@
 import Image from "next/image";
-
+import ProfessionalExperiences from "./components/professionalExperiences";
 
 export default function About() {
   return (
     <>
-      <h1 className="text-2xl text-primary">about Page</h1>
+      <div className="md:container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+        <ProfessionalExperiences />
+        {/* <ProfessionalExperiences /> */}
+      </div>
     </>
   );
 }

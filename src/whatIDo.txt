@@ -10,7 +10,7 @@ Home Page:
     - feature projects (done)
     - clients feadBack (done)
 about Page : 
-    - professional experiences
+    - professional experiences (done)
     - education  
     - detailed skills 
 projects page :
