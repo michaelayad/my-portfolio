@@ -54,3 +54,8 @@ Apis:
         - update  (done)
         - delete  (done)
     - home route
+    - professional experience routes
+        - add
+        - get by profileId
+        - update
+        - delete
