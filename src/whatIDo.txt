@@ -1,6 +1,7 @@
 shared:
     - make server mode & client mode settings (same as vieux dashboard)
     - change mode same as vieux dashboard
+    - solve change mode component issue when refresh in dark mode
 
 Home Page:
     - services i do (done)
